@@ -49,7 +49,8 @@ dependencies {
     implementation files('libs/classes-dex2jar.jar')
     api files('libs/umeng-analytics-v6.1.0.jar')
 
-    api project(':net')
+//    api project(':net')
 
     api files('libs/GDTSDK.unionNormal.4.132.1002.aar')
+    api 'com.github.ecenllen:net2:v1.0.0'
 }
