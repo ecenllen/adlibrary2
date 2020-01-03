@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.yingyongduoduo.ad">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <!-- 广点通开始 -->
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.qq.e.ads.PortraitADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.qq.e.ads.LandscapeADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5c476148f1f5564e58000ae2" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="baidu" />
+
+        <meta-data
+            android:name="AGENCY_CHANNEL"
+            android:value="yuxu" />
+
+        <meta-data
+            android:name="WXAPPID"
+            android:value="wxdb8da03dfbbc80a5" />
+
+    </application>
+
+</manifest>
