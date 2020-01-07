@@ -442,7 +442,7 @@ public class ADControl {
 
     private static void ShowSelfCP(final Context context) {
 
-        SelfCPDialog sfCP = new SelfCPDialog(context);
+        final SelfCPDialog sfCP = new SelfCPDialog(context);
         sfCP.setADListener(new SelfBannerAdListener() {
             @Override
             public void onAdClick(ADBean adBean) {
@@ -450,7 +450,7 @@ public class ADControl {
 
             @Override
             public void onAdFailed() {
-
+                sfCP.dismiss();
             }
 
             @Override

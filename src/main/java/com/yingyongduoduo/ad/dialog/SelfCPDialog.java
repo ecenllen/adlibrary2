@@ -65,7 +65,7 @@ public class SelfCPDialog extends Dialog {
         });
 //		Window dialogWindow = getWindow();
 //		WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-        Display display = ((Activity) context).getWindowManager().getDefaultDisplay(); // 获取屏幕宽、高用
+        final Display display = ((Activity) context).getWindowManager().getDefaultDisplay(); // 获取屏幕宽、高用
 //		lp.width = (int) (display.widthPixels * 0.8); // 高度设置为屏幕的0.6
 //		dialogWindow.setAttributes(lp);
         if (bean != null) {
@@ -79,7 +79,14 @@ public class SelfCPDialog extends Dialog {
         } else {
             if (listener != null)
                 listener.onAdFailed();
-            this.dismiss();
+
+            if(rl_content != null)  // 临时处理一下关闭
+                rl_content.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dismiss();
+                    }
+                }, 100);
         }
     }
 
