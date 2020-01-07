@@ -36,10 +36,6 @@ public class GDTMuBanTuiPingDialog extends Dialog {
         super(context, R.style.ad_prefix_dialog);
         this.context = context;
 
-//        List<ADBean> beans = AppConfig.GetSelfADByCount(context, 1, "tp_count");
-//        if (null != beans && beans.size() == 1) {
-//            bean = beans.get(0);
-//        }
 
     }
 
@@ -116,20 +112,17 @@ public class GDTMuBanTuiPingDialog extends Dialog {
 //                        if (listener != null)
 //                            listener.onAdClick(bean);
 //                        AppConfig.openAD(context, bean, "tp_count");
-
                     GDTMuBanTuiPingDialog.this.dismiss();
                 } else {
+                    GDTMuBanTuiPingDialog.this.dismiss();
                     ((Activity) context).finish();
                 }
 
             } else if (i == R.id.bt_quit) {
                 if (ischange) {
+                    GDTMuBanTuiPingDialog.this.dismiss();
                     ((Activity) context).finish();
                 } else {//去看看
-//                        if (listener != null)
-//                            listener.onAdClick(bean);
-//                        AppConfig.openAD(context, bean, "tp_count");
-
                     GDTMuBanTuiPingDialog.this.dismiss();
                 }
 

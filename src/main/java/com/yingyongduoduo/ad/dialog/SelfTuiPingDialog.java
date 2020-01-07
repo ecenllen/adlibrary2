@@ -1,7 +1,6 @@
 package com.yingyongduoduo.ad.dialog;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -70,30 +69,20 @@ public class SelfTuiPingDialog extends Dialog {
                         SelfTuiPingDialog.this.dismiss();
                     }
                 } else {
-                    ((Activity) context).finish();
                     SelfTuiPingDialog.this.dismiss();
+                    ((Activity) context).finish();
                     if (isExit) {
-//                        if (MusicPlayer.isPlaying()) {
-//                            MusicPlayer.playOrPause();
-//                        }
-//                        unbindService();
-//                        finish();
-
                         android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(0);
-                        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-                        manager.killBackgroundProcesses(context.getPackageName());
                     }
                 }
             } else if (v.getId() == R.id.bt_quit) {
                 if (ischange) {
-                    ((Activity) context).finish();
                     SelfTuiPingDialog.this.dismiss();
+                    ((Activity) context).finish();
                     if (isExit) {
                         android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(0);
-                        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-                        manager.killBackgroundProcesses(context.getPackageName());
                     }
                 } else {
                     if (bean != null) {

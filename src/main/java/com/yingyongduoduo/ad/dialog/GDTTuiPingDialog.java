@@ -86,15 +86,14 @@ public class GDTTuiPingDialog extends Dialog {
                     }
                     GDTTuiPingDialog.this.dismiss();
                 } else {
+                    GDTTuiPingDialog.this.dismiss();
                     ((Activity) context).finish();
                 }
             }else if(v.getId()==R.id.bt_quit){
                 if (ischange) {
+                    GDTTuiPingDialog.this.dismiss();
                     ((Activity) context).finish();
                 } else {
-//                        if (listener != null)
-//                            listener.onAdClick(bean);
-//                        AppConfig.openAD(context, bean, "tp_count");
                     if(adItem!=null)
                         adItem.onClicked(v);
                     GDTTuiPingDialog.this.dismiss();
