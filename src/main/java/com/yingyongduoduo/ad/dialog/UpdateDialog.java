@@ -38,11 +38,7 @@ public class UpdateDialog extends Dialog {
                 UpdateDialog.this.dismiss();
             } else if (v.getId() == R.id.bt_quit) {
                 ADBean adbean = new ADBean();
-
                 adbean.setAd_name(context.getString(R.string.app_name));
-//                adbean.setAd_packagename(AppConfig.configBean.updatemsg.packageName);
-//                adbean.setAd_apkurl(AppConfig.configBean.updatemsg.url);
-//                adbean.setAd_versioncode(AppConfig.configBean.updatemsg.versioncode);
                 adbean.setAd_packagename(CacheUtils.getConfig(SysConfigEnum.UPDATE_PACKAGENAME));
                 adbean.setAd_apkurl(CacheUtils.getConfig(SysConfigEnum.UPDATE_URL));
                 adbean.setAd_versioncode(CacheUtils.getConfigInt(SysConfigEnum.UPDATE_VERSION));
