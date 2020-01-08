@@ -62,5 +62,5 @@ dependencies {
 //    api project(':net')
 
 //    api files('libs/GDTSDK.unionNormal.4.132.1002.aar')
-    api 'com.github.ecenllen:net2:v6.0.4'
+    api 'com.github.ecenllen:net2:v6.0.5'
 }
